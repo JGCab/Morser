@@ -1,0 +1,4 @@
+Manifest-Version: 1.0
+Package-Name: com.morser
+Main-Class: Main
+
