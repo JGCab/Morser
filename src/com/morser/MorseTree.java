@@ -1,4 +1,9 @@
 package com.morser;
+/**
+ * @author John Gabriel Cabatu-an
+ * @version 1.0
+ * 
+ */
 
 public class MorseTree {
 
@@ -15,7 +20,6 @@ public class MorseTree {
 	};
 	
 	// the generation of the tree is done procedurally
-	// because the creator is too lazy to hardcode it.
 	private int indx = 0;
 	Node<String> root = new Node<String>();
 	private void treeCreation(Node<String> curr, int level){
@@ -60,7 +64,10 @@ public class MorseTree {
 			return null;
 		}
 	}
-
+		/**Travels the Morse tree and takes the data it arrives to.
+		 * @param code a string to decode, either . or - only.
+		 * @return a string containing the decoded letter.
+		 */
 	public String Decode(String code){
 		char[] splitCode = code.toCharArray();
 		return DecryptSearch(this.getRoot(), splitCode, 0);
@@ -82,7 +89,10 @@ public class MorseTree {
 
 		return null;
 	}
-
+		/** Search for the string in the Morse tree
+		 * @param data a string to encode. Only accepts letters.
+		 * @return returns a string containing th eencoded message.
+		 */
 	public String Encode(String data){
 		String enMessage= "";
 		data =  data.toUpperCase();
